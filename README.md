@@ -1,21 +1,20 @@
-# Control_Shape_Creator
+#Control Shape Creator
 Control Shape Creator, Maya Python Scripting
-#Control Shape Dev Tool
-#
-#Authors: Callum Macfarlane
-#Contact: 1301948@abertay.ac.uk
-#
-#-----------------------------------------------
-#
-#Description: This tool is used to produce a variety of different control shapes for your desired joint.
-#It will go through the process of renaming, creating offset groups and placing the control shape.
-#You can change the shape and size of your control shape.
-#To prevent any errors you may occur with not having your control shapes 0'ed out or not in an offset group.
-#
-#To install this script create a shelf button using the following code:
-#
-#
-#
+Control Shape Dev Tool
+
+Authors: Callum Macfarlane
+Contact: 1301948@abertay.ac.uk
+-----------------------------------------------
+
+Description: This tool is used to produce a variety of different control shapes for your desired joint.
+It will go through the process of renaming, creating offset groups and placing the control shape.
+You can change the shape and size of your control shape.
+To prevent any errors you may occur with not having your control shapes 0'ed out or not in an offset group.
+
+To install this script create a shelf button using the following code:
+
+
+
 
 
 
