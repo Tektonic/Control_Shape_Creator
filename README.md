@@ -27,9 +27,8 @@ Also eventually adding the functionality of looking up through the heirarchy to 
 
 
 import maya.cmds
+
 import webbrowser
-
-
 
 
 def close(self):
