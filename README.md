@@ -18,55 +18,16 @@ To install this script create a shelf button using the following code:
 
 
 
-#Delete UI if already and existing one
 import maya.cmds
-if maya.cmds.window(csc, exists=True):
-    maya.cmds.deleteUI(csc)
+import webbrowser
 
 
-
-#Create Window
-csc = maya.cmds.window(title='Control_Shape_Creator')
-
-#Column Layout
-maya.cmds.columnLayout()
-
-#Menu Bar
-menuBarLayout = maya.cmds.menuBarLayout()
-
-#Edit Menu
-maya.cmds.menu( label='Edit' )
-maya.cmds.menuItem( label='Save Settings' )
-maya.cmds.menuItem( label='Reset Settings' )
-
-#Help Menu
-maya.cmds.menu (label='Help')
-maya.cmds.menuItem( label='Help On Control Shape Creator' )
-
-
-#Slider for Radius
-my_value = maya.cmds.floatSliderGrp( field=True, label='Radius', minValue=0, maxValue=10, fieldMinValue=0, fieldMaxValue=10, value=0.5 ,cc=slider_drag_callback)
-
-
-#Row Layout for bottom buttons
-maya.cmds.rowLayout( numberOfColumns=3, columnWidth3=(80, 75, 150))
-maya.cmds.button( label='Atom', w=150, command=controlshape)
-maya.cmds.button( label='Circle',w=150, command=circleshape)
-maya.cmds.button( label='Close', w=150, command=close)
-
-#Display Window
-maya.cmds.showWindow( csc )
-
-
-maya.cmds.floatSliderGrp(my_value, query=True, value=True)
-print my_value
 
 #Command for Close Button
 def close(self):
     
     if maya.cmds.window(csc, exists=True):
        maya.cmds.deleteUI(csc, window=True)
-
 
 
 #Creating Atom Control Shape
@@ -226,5 +187,53 @@ def circleshape(self):
     maya.cmds.Unparent()
     
 ############
+
+#Command for Help Button
+def cschelp(self):
+    
+    brower = webbrowser.open('https://raw.githubusercontent.com/Tektonic/Control Shape Creator/0cea843265552c371aaaf56d2b20572c72451df0/README.md')
+
+
+
+#Delete UI if already and existing one
+
+if maya.cmds.window('Control Shape Creator', exists=True):
+    maya.cmds.deleteUI('Control Shape Creator')
+
+#Create Window
+csc = maya.cmds.window('Control Shape Creator')
+
+#Column Layout
+maya.cmds.columnLayout()
+
+#Menu Bar
+menuBarLayout = maya.cmds.menuBarLayout()
+
+#Edit Menu
+maya.cmds.menu( label='Edit' )
+maya.cmds.menuItem( label='Save Settings' )
+maya.cmds.menuItem( label='Reset Settings' )
+
+#Help Menu
+maya.cmds.menu (label='Help')
+maya.cmds.menuItem( label='Help On Control Shape Creator', command = cschelp )
+
+
+#Slider for Radius
+my_value = maya.cmds.floatSliderGrp( field=True, label='Radius', minValue=0, maxValue=10, fieldMinValue=0, fieldMaxValue=10, value=0.5 )
+
+
+#Row Layout for bottom buttons
+maya.cmds.rowLayout( numberOfColumns=3, columnWidth3=(80, 75, 150))
+maya.cmds.button( label='Atom', w=150, command=controlshape)
+maya.cmds.button( label='Circle',w=150, command=circleshape)
+maya.cmds.button( label='Close', w=150, command=close)
+
+#Display Window
+maya.cmds.showWindow( csc )
+
+
+maya.cmds.floatSliderGrp(my_value, query=True, value=True)
+print my_value
 
 
