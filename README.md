@@ -2,8 +2,8 @@
 Control Shape Creator, Maya Python Scripting
 Control Shape Dev Tool
 
-Authors: Callum Macfarlane
-Contact: 1301948@abertay.ac.uk
+#Authors: Callum Macfarlane
+#Contact: 1301948@abertay.ac.uk
 -----------------------------------------------
 
 Description: This tool is used to produce a variety of different control shapes for your desired joint.
