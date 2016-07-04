@@ -6,7 +6,8 @@ Control Shape Dev Tool
 #Contact: 1301948@abertay.ac.uk
 
 
-Description: This tool is used to produce a variety of different control shapes for your desired joint.
+#Description
+This tool is used to produce a variety of different control shapes for your desired joint.
 It will go through the process of renaming, creating offset groups and placing the control shape.
 You can change the shape and size of your control shape.
 To prevent any errors you may occur with not having your control shapes 0'ed out or not in an offset group.
