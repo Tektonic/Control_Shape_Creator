@@ -11,7 +11,14 @@ It will go through the process of renaming, creating offset groups and placing t
 You can change the shape and size of your control shape.
 To prevent any errors you may occur with not having your control shapes 0'ed out or not in an offset group.
 
-To install this script create a shelf button using the following code:
+#Planned additions for the future:
+
+Unfortuneatly could not getting the 'Reset' and 'Save' Settings which the default Maya windows have, not been able to find a way of doing it yet but hopefully will be able to.
+
+Also eventually adding the functionality of looking up through the heirarchy to find where to add the IK controls automatically, then to create the IK and connect them to the control shapes which have been created. This will take even more research but I hope to be able to update this to make it possible so have a script which severly cuts down on rigging time.
+
+
+#To install this script create a shelf button using the following code:
 
 
 
